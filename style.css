@@ -1,0 +1,519 @@
+/* Reset global styles */  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+/* Body styles */  
+body {  
+    font-family: 'Poppins', sans-serif; /* Use Poppins como fonte padrão */  
+    color: #333; /* Cor do texto padrão */  
+    line-height: 1.6; /* Altura da linha padrão */  
+    background-color: #f4f4f4; /* Cor de fundo da página */  
+}  
+
+/* Header Section */  
+header {  
+    height: 100vh; /* Ocupa toda a altura da janela */  
+    background: url('image2.jpg') no-repeat center center / cover; /* Imagem de fundo responsiva */  
+    animation: backgroundChange 30s infinite ease-in-out; /* Animação do fundo */  
+    display: flex; /* Usar flexbox para posicionamento */  
+    flex-direction: column; /* Empilhar elementos verticalmente */  
+    justify-content: center; /* Centralizar verticalmente */  
+    align-items: center; /* Centralizar horizontalmente */  
+    text-align: center; /* Centralizar texto */  
+    color: white; /* Cor do texto */  
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Cria sombra no texto */  
+}  
+
+/* Header Title */  
+header h1 {  
+    font-size: 4rem; /* Tamanho do cabeçalho principal */  
+    margin-bottom: 20px; /* Espaço abaixo do título */  
+    animation: fadeInDown 2s; /* Animação de entrada */  
+}  
+
+/* Header Description */  
+header p {  
+    font-size: 1.5rem; /* Tamanho do parágrafo abaixo do título */  
+    margin-bottom: 40px; /* Espaço abaixo do parágrafo */  
+    animation: fadeInUp 2s; /* Animação de entrada */  
+}  
+
+/* Button styles for header */  
+header a {  
+    display: inline-block; /* Exibir como bloco inline */  
+    padding: 10px 30px; /* Espaçamento interno */  
+    font-size: 1.2rem; /* Tamanho da fonte do botão */  
+    background: #4facfe; /* Cor de fundo do botão */  
+    color: white; /* Cor do texto do botão */  
+    text-decoration: none; /* Remover sublinhado */  
+    border-radius: 5px; /* Bordas arredondadas */  
+    transition: background 0.3s ease, transform 0.3s ease; /* Transições suaves */  
+}  
+
+header a:hover {  
+    background: #007bff; /* Cor ao passar o mouse */  
+    transform: scale(1.1); /* Aumentar o botão ao passar o mouse */  
+}  
+
+header a:active {  
+    transform: scale(0.95); /* Encolhe o botão ao clicar */  
+}  
+
+/* Navigation styles */  
+nav {  
+    background: white; /* Cor de fundo da nav */  
+    padding: 15px 0; /* Espaçamento interno */  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra da nav */  
+    position: sticky; /* Fixa no topo ao rolar */  
+    top: 0; /* Fica na parte superior */  
+    z-index: 1000; /* Camada acima dos outros elementos */  
+}  
+
+nav ul {  
+    display: flex; /* Exibir como flexbox */  
+    justify-content: center; /* Centraliza os itens da lista */  
+    list-style: none; /* Remove marcadores da lista */  
+}  
+
+nav ul li {  
+    margin: 0 15px; /* Espaçamento entre os itens */  
+}  
+
+nav ul li a {  
+    text-decoration: none; /* Remove sublinhado dos links */  
+    color: #333; /* Cor do texto do link */  
+    font-weight: bold; /* Negrito */  
+    transition: color 0.3s ease, transform 0.3s ease; /* Transições suaves */  
+}  
+
+nav ul li a:hover {  
+    color: #007bff; /* Cor ao passar o mouse sobre o link */  
+    transform: translateY(-5px); /* Sobe um pouco quando passa o mouse */  
+}  
+
+/* Content styles */  
+.content {  
+    padding: 50px 10%; /* Espaçamento  em cima e embaixo */  
+}  
+
+/* Section styles */  
+.content section {  
+    margin-bottom: 60px; /* Espaçamento entre seções */  
+}  
+
+.content h3 {  
+    font-size: 2.5rem; /* Tamanho do cabeçalho das seções */  
+    margin-bottom: 20px; /* Espaço abaixo do cabeçalho */  
+    color: #007bff; /* Cor dos cabeçalhos de seção */  
+}  
+
+/* Service styles */  
+.services {  
+    display: grid; /* Usar grid layout */  
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Colunas responsivas */  
+    gap: 30px; /* Espaçamento entre cartões de serviço */  
+}  
+
+.service {  
+    background: #f9f9f9; /* Cor de fundo do serviço */  
+    padding: 30px; /* Espaço interno do serviço */  
+    text-align: center; /* Centraliza o texto dentro do cartão */  
+    border-radius: 12px; /* Bordas arredondadas */  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do serviço */  
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */  
+    display: flex; /* Usar flexbox para o conteúdo */  
+    flex-direction: column; /* Colocar conteúdo em coluna */  
+    align-items: center; /* Centraliza horizontalmente */  
+    justify-content: center; /* Centraliza verticalmente */  
+    max-width: 300px; /* Largura máxima do cartão */  
+}  
+
+.service:hover {  
+    transform: translateY(-10px); /* Efeito ao passar o mouse */  
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao passar o mouse */  
+}  
+
+.service img {  
+    width: 100px; /* Largura da imagem */  
+    height: 100px; /* Altura da imagem */  
+    object-fit: cover; /* Cobre a área da imagem */  
+    margin-bottom: 20px; /* Espaço abaixo da imagem */  
+    border-radius: 50%; /* Bordas arredondadas para imagem */  
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */  
+}  
+
+.service:hover img {  
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */  
+}  
+
+.service h4 {  
+    font-size: 1.5rem; /* Tamanho do cabeçalho do serviço */  
+    color: #333; /* Cor do texto */  
+    margin-bottom: 10px; /* Espaço abaixo do cabeçalho */  
+}  
+
+.service p {  
+    font-size: 1rem; /* Tamanho do texto do serviço */  
+    color: #555; /* Cor do texto do serviço */  
+    line-height: 1.5; /* Espaçamento entre linhas */  
+}  
+
+/* Modal Styles */  
+.modal {  
+    display: none; /* Oculto por padrão */  
+    position: fixed; /* Fixo na tela */  
+    z-index: 1; /* Acima dos outros elementos */  
+    left: 0; /* À esquerda */  
+    top: 0; /* Ao topo */  
+    width: 100%; /* Ocupa toda a largura */  
+    height: 100%; /* Ocupa toda a altura */  
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */  
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */  
+    animation: fadeIn 0.5s; /* Efeito de surgimento */  
+}  
+
+.modal-content {  
+    background-color: white; /* Cor de fundo do modal */  
+    margin: 10% auto; /* Margem superior e centralizado */  
+    padding: 40px; /* Espaçamento interno */  
+    width: 60%; /* Largura do modal */  
+    border-radius: 10px; /* Bordas arredondadas */  
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra do modal */  
+    animation: zoomIn 0.5s; /* Efeito de surgimento */  
+    position: relative; /* Para posicionar o botão de fechar */  
+}  
+
+.close {  
+    color: #aaa; /* Cor do texto do botão de fechar */  
+    font-size: 28px; /* Tamanho da fonte */  
+    font-weight: bold; /* Negrito */  
+    position: absolute; /* Posicionamento absoluto */  
+    top: 10px; /* A 10 pixels do topo */  
+    right: 20px; /* A 20 pixels da direita */  
+    cursor: pointer; /* Muda o cursor ao passar o mouse */  
+}  
+
+.close:hover {  
+    color: black; /* Cor ao passar o mouse */  
+}  
+
+/* Input and select styling */  
+input, select {  
+    width: 100%; /* Largura total do campo */  
+    padding: 12px; /* Espaçamento interno */  
+    margin: 10px 0; /* Margem vertical */  
+    border-radius: 5px; /* Bordas arredondadas */  
+    border: 1px solid #ccc; /* Borda */  
+}  
+
+/* Confirmation button in modal */  
+#confirmService {  
+    width: 100%; /* Largura total */  
+    background-color: #4CAF50; /* Cor do botão */  
+    color: white; /* Cor do texto */  
+    padding: 12px; /* Espaçamento interno */  
+    border-radius: 5px; /* Bordas arredondadas */  
+    cursor: pointer; /* Muda o cursor ao passar o mouse */  
+}  
+
+#confirmService:hover {  
+    background-color: #45a049; /* Cor ao passar o mouse */  
+}  
+
+/* Keyframe Animations */  
+@keyframes fadeIn {  
+    from { opacity: 0; } /* Começa invisível */  
+    to { opacity: 1; } /* Termina visível */  
+}  
+
+@keyframes zoomIn {  
+    from { transform: scale(0.8); opacity: 0; } /* Começa menor e invisível */  
+    to { transform: scale(1); opacity: 1; } /* Termina no tamanho original e visível */  
+}  
+
+/* Gallery Section */  
+.gallery {  
+    display: grid; /* Usar grid layout para galeria */  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */  
+    gap: 15px; /* Espaçamento entre as imagens */  
+}  
+
+.gallery img {  
+    width: 100%; /* Largura total da imagem */  
+    height: auto; /* Mantém a proporção da imagem */  
+    border-radius: 8px; /* Bordas arredondadas */  
+    transition: transform 0.3s ease; /* Transição suave */  
+}  
+
+.gallery img:hover {  
+    transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */  
+}  
+
+/* Team Section */  
+.team {  
+    display: flex; /* Usar flexbox para a equipe */  
+    flex-wrap: wrap; /* Permite quebrar linha */  
+    gap: 20px; /* Espaçamento entre os membros da equipe */  
+}  
+
+.team .member {  
+    flex: 1 1 calc(33% - 20px); /* Largura responsiva com espaçamento */  
+    text-align: center; /* Centraliza o texto */  
+    background: white; /* Cor de fundo da equipe */  
+    padding: 20px; /* Espaçamento interno */  
+    border-radius: 10px; /* Bordas arredondadas */  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do membro */  
+}  
+
+.team .member img {  
+    width: 120px; /* Largura da imagem */  
+    height: 120px; /* Altura da imagem */  
+    border-radius: 50%; /* Bordas arredondadas para imagem */  
+    margin-bottom: 10px; /* Espaço abaixo da imagem */  
+}  
+
+.team .member h4 {  
+    font-size: 1.5rem; /* Tamanho do nome do membro */  
+    margin-bottom: 10px; /* Espaço abaixo do nome */  
+}  
+
+.team .member p {  
+    font-size: 1rem; /* Tamanho da descrição */  
+    color: #777; /* Cor do texto do membro */  
+}  
+/* Estilos para o botão "Saber Mais" */  
+/* Estilos para o botão "Saber Mais" (btn-more) */  
+button.btn-more {  
+    padding: 12px 30px; /* Espaçamento interno do botão */  
+    background-color: #6272CE; /* Cor de fundo do botão */  
+    color: white; /* Cor do texto */  
+    font-size: 1.2rem; /* Tamanho da fonte */  
+    border: none; /* Sem borda */  
+    border-radius: 5px; /* Bordas arredondadas */  
+    cursor: pointer; /* Muda o cursor ao passar o mouse */  
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para as interações */  
+    margin-top: 20px; /* Espaço acima do botão */  
+}  
+
+/* Efeito ao passar o mouse sobre o botão "Saber Mais" */  
+button.btn-more:hover {  
+    background-color: #4FACFE; /* Cor mais clara ao passar o mouse */  
+    transform: scale(1.05); /* Aumenta um pouco o botão */  
+}  
+
+/* Efeito ao clicar no botão "Saber Mais" */  
+button.btn-more:active {  
+    transform: scale(0.95); /* Diminui o botão ao clicar */  
+}  
+/* About Section Styles */
+#about {
+    background-color: #ffffff; /* Fundo branco para contraste */
+    padding: 60px 10%; /* Espaçamento superior e inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-header h3 {
+    font-size: 2.5rem; /* Tamanho grande para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #007bff; /* Cor do título */
+    font-weight: bold;
+}
+
+.about-header p {
+    font-size: 1.2rem; /* Texto com tamanho legível */
+    color: #555; /* Cor suave para o texto */
+    margin-bottom: 40px; /* Espaço abaixo do texto */
+    line-height: 1.6;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo */
+    gap: 30px; /* Espaçamento entre os itens */
+}
+
+.about-item {
+    background-color: #f9f9f9; /* Cor de fundo suave para os itens */
+    padding: 20px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra mais forte */
+}
+
+.about-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    color: #333; /* Cor do título */
+    font-weight: bold;
+}
+
+.about-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+/* Animação para o botão */
+.btn-more {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-more:hover {
+    background-color: #6272CE;
+    transform: scale(1.1);
+}
+
+/* Modal com animação */
+.modal-content {
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service, .gallery-item {
+        width: 100%;
+    }
+
+    header {
+        text-align: center;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+input:focus, select:focus {
+    border-color: #6272CE;
+    outline: none;
+}
+.parallax {
+    background-image: url('your-image.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Estilizando o footer */
+footer {
+    background-color: #333; /* Cor de fundo escura para destacar o rodapé */
+    color: white; /* Texto branco para contraste */
+    padding: 20px 0; /* Espaçamento interno */
+    text-align: center; /* Centralizar o conteúdo */
+    font-size: 16px; /* Tamanho da fonte */
+    border-top: 5px solid #6272CE; /* Linha superior com a cor do header */
+}
+
+footer p {
+    margin: 0; /* Remover margens */
+}
+
+footer a {
+    color: #6272CE; /* Cor do link */
+    text-decoration: none; /* Remover sublinhado */
+    font-weight: bold; /* Negrito nos links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+footer .social-icons {
+    margin-top: 15px; /* Espaçamento superior */
+}
+
+footer .social-icons a {
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    font-size: 20px; /* Tamanho dos ícones */
+    color: #fff; /* Cor dos ícones */
+    transition: color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+footer .social-icons a:hover {
+    color: #6272CE; /* Cor do ícone ao passar o mouse */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    footer {
+        font-size: 14px; /* Reduzir o tamanho da fonte em telas pequenas */
+    }
+
+    footer .social-icons a {
+        font-size: 18px; /* Tamanho menor dos ícones */
+        margin: 0 8px; /* Ajustar o espaço entre os ícones */
+    }
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.modal.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}

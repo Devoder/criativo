@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Modern Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#team">Equipe</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Bem-vindo ao Nosso Mundo Criativo</h1>
+        <p>Transformando ideias em realidade com estilo e inovação.</p>
+        <a href="#about">Explorar Mais</a>
+    </header>
+
+    <div class="content">
+        <section id="about">
+            <div class="about-wrapper">
+                <div class="about-header">
+                    <h3>Sobre Nós</h3>
+                    <p>Transformamos ideias em experiências digitais que impressionam e inspiram. Acreditamos no poder da criatividade para transformar o mundo.</p>
+                </div>
+                <div class="about-content">
+                   
+                    <div class="about-item">
+                        <h4>Visão</h4>
+                        <p>Ser a referência em inovação digital globalmente, ajudando marcas a se destacarem e se conectarem com seus públicos de maneira mais autêntica e eficaz.</p>
+                    </div>
+                    <div class="about-item">
+                        <h4>Valores</h4>
+                        <p>Nosso compromisso é com a excelência. Inovação, integridade e colaboração são os pilares que sustentam nossas criações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h3>Serviços</h3>
+            <div class="services">
+                <div class="service">
+                    <img src="service1.jpg" alt="Desenvolvimento">
+                    <h4>Desenvolvimento Web</h4>
+                    <p>Sites de última geração, construídos com precisão.</p>
+                    <button class="btn-more" data-service="development">Saber Mais</button>
+                </div>
+                <div class="service">
+                    <img src="service2.jpg" alt="Design">
+                    <h4>Design Gráfico</h4>
+                    <p>Design criativo para capturar a atenção.</p>
+                    <button class="btn-more" data-service="design">Saber Mais</button>
+                </div>
+                <div class="service">
+                    <img src="service3.jpg" alt="SEO">
+                    <h4>Otimização SEO</h4>
+                    <p>Aumente sua visibilidade online de forma eficaz.</p>
+                    <button class="btn-more" data-service="seo">Saber Mais</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h3>Galeria</h3>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="gallery1.jpg" alt="Natureza">
+                   
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery2.jpg" alt="Tecnologia">
+                 
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery3.jpg" alt="Arquitetura">
+                   
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery4.jpg" alt="Arte">
+                   
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <h3>Conheça Nossa Equipe</h3>
+            <div class="team">
+                <div class="member">
+                    <img src="member1.JPG" alt="Jane Doe">
+                    <h4>Ângelo Domingos</h4>
+                    <p>CEO & Fundador</p>
+                </div>
+                <div class="member">
+                    <img src="member2.jpg" alt="John Smith">
+                    <h4>John Smith</h4>
+                    <p>Desenvolvedor Principal</p>
+                </div>
+                <div class="member">
+                    <img src="member3.jpg" alt="Emily Rose">
+                    <h4>Emily Rose</h4>
+                    <p>Especialista em Marketing</p>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+
+    <!-- Modal Container (hidden by default) -->
+   <!-- Modal Container (hidden by default) -->  
+<!-- Keeping your existing HTML structure along with Modal -->  
+<div id="modal" class="modal" style="display:none;">  
+    <div class="modal-content">  
+        <span id="closeModal" class="close">&times;</span>  
+        <h2 id="modalTitle"></h2>  
+        <p id="modalDescription"></p>  
+
+        <label for="subServicesSelect">Escolha os Subserviços:</label>  
+        <select id="subServicesSelect" multiple>  
+            <!-- Os subserviços serão preenchidos dinamicamente -->  
+        </select>  
+
+        <label for="clientName">Nome do Cliente:</label>  
+        <input type="text" id="clientName" required>  
+
+        <label for="paymentType">Tipo de Pagamento:</label>  
+        <select id="paymentType">  
+            <option value="cartão">Cartão</option>  
+            <option value="boleto">Boleto</option>  
+            <option value="transferência">Transferência</option>  
+        </select>  
+        <button id="confirmService">Confirmar Serviço</button>  
+      
+    </div>  
+</div>
+<footer>
+    <div class="footer-content">
+        <div>
+            <h4>Contato</h4>
+            <p>Endereço: Rua Criativa, 123</p>
+            <p>Email: contato@exemplo.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="facebook" target="_blank">Facebook</a>
+            <a href="#" class="instagram" target="_blank">Instagram</a>
+            <a href="#" class="linkedin" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
